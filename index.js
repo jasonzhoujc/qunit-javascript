@@ -29,6 +29,7 @@ myevent.on('qunit.spawn', function(url) {
 myevent.on('qunit.done', function(failed, passed) {
     if (failed === 0 && passed === 2) { successes[currentUrl]++; }
 });
-
-var myQunit = require('./lib/myQunit.js');
+gaia = require('./lib/gaia');
+debugger
+var myQunit = require('./lib/gaia/qunitProcess.js');
 myQunit(myevent, ops);
